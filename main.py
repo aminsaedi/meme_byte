@@ -1,11 +1,10 @@
 from get_image import get_image as gi
-import os
 from imager import imager
 from tw import tw
 
-output_stream = os.popen("cat /usr/share/dict/words | egrep bit$")
-list = output_stream.read().split()
+file = open('persian_list', 'rt')
 
+list = file.read().split()
 parent_id = None
 
 for word in list:
