@@ -3,6 +3,12 @@
 
 Simple python script that generates bit-byte memes in english and farsi.
 
+## Installation
+```
+pipenv install
+pip install -r requirements.txt
+```
+
 ## Usage
 ```
 python main.py --language fa/en
