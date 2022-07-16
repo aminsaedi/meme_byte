@@ -10,7 +10,9 @@ def get_octa_img(img, word):
 	img_size = img.resize((100,100))
 	octa_img = Image.new("RGB", (400, 250), "white")
 	draw = ImageDraw.Draw(octa_img)
+	# Doesn't matter that app language is enlish or persian. it works in both languages but not optimized
 	word = re.sub(r"بیت$", "بایت", word)
+	word = re.sub(r"bit$", "byte", word)
 	word = arabic_reshaper.reshape(word)    # correct its shape
 	word = get_display(word) 
 	draw.text((0, 0), word, (0, 0, 0), font=font)

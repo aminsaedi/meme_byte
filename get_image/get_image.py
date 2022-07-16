@@ -8,6 +8,6 @@ def get_image(word):
 	soup = BeautifulSoup(text, 'html.parser')
 
 	try:
-		return (soup.find_all("img")[2]['src'])
+		return (soup.find_all("img")[1]['src'])
 	except:
 		return (None)
